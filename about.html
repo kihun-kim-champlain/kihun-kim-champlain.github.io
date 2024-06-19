@@ -12,7 +12,8 @@
 
     <!-- Custom styles for this template -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -42,60 +43,37 @@
 </nav>
 
 <main role="main" class="container-fluid">
-    <h2>Carousel</h2>
-    <div id="webd-carouselIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#webd-carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#webd-carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#webd-carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#webd-carouselIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/carousel1.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Football field</h5>
-                    <p>Happy</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/carousel2.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Garden Flowers</h5>
-                    <p>Resting</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/carousel3.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Mountain</h5>
-                    <p>Running</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/carousel4.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Mountain</h5>
-                    <p>Running with stick</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#webd-carouselIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#webd-carouselIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+    <div id="h1"></div>
+    <div id="img"></div>
+    <div id="content"></div>
+
+    <script>
+        const user = {
+            name: 'Kihun Kim',
+            imageUrl: 'images/about.jpg',
+            bio: 'My name is Kihun, though I often go by Andy. I was born in South Korea and spent my childhood in the Philippines, where I completed my high school education. I am currently on the verge of completing my degree in Software Development. My experience with version control system is primarily through GitHub. I enjoy browsing through various projects to learn from others\' code. Through this course, I aim to deepen my understanding of version control systems, which I anticipate will streamline my future projects. Outside of classes, I pursue hobbies seasonally, fishing during the warmer months, snowboarding in winter, and playing video games year-round. All the pictures used in this project are pictures of my dog and his name is \"Cookie\".'
+        };
+
+        // Step one - Create a React element
+        const nameElement = React.createElement('h1', null, user.name);
+        const imageElement = React.createElement('img', { src: user.imageUrl, alt: 'Profile image', style: { width: '200px', height: '200px' } });
+        const bioElement = React.createElement('p', null, user.bio);
+        // Step 2: Render the React element
+        ReactDOM.render(nameElement, document.getElementById('h1'));
+        ReactDOM.render(imageElement, document.getElementById('img'));
+        ReactDOM.render(bioElement, document.getElementById('content'));
+
+    </script>
+
 </main><!-- /.container -->
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>

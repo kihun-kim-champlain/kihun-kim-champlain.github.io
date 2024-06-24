@@ -4,7 +4,6 @@
 /*GLOBAL*/
 body {
     padding-top: 5rem;
-
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -16,7 +15,10 @@ main {
     padding: 20px;
 }
 main.container-fluid {
+    display: flex;
+    flex-direction: column;
     width: 50%;
+    padding-bottom: 20px;
 }
 
 p {
@@ -33,7 +35,7 @@ nav {
 }
 
 button.navbar-toggler{
-margin-right: 10px;
+    margin-right: 10px;
 }
 
 .home_2col {
@@ -99,3 +101,28 @@ img.dibley {
     grid-row: 4;
     background-color: #FFC0CB; 
 }
+
+main.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.carousel-container h2 {
+    text-align: left;
+    width: 50%;
+}
+
+.carousel_slide {
+    width: 50%;
+}
+
+.footer {
+    margin-top: 20px;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    text-align: right;
+    font-size: 0.875em;
+}
+
